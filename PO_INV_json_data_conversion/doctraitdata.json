@@ -1,0 +1,53 @@
+[{
+	"dmscode": "5c4f119efd024e4593906c8f9608e35b",
+	"docname": "NBFC_PO_123_revision1.pdf",
+	"doctype": "PO",
+	"tenantid": "5152ede3-7b9f-481a-9765-e881f0735866",
+	"processed": true,
+	"statuscode": 200,
+	"metadata": {
+		"country": "IND",
+		"vendordetails": {
+			"vendorgroupname": null,
+			"vendorgroupid": null,
+			"vendorentityname": null,
+			"vendorentityid": null,
+			"vendorcountry": null,
+			"vendorcurrency": null
+		},
+		"spend_sub_category": "sw",
+		"receiver_name": "NBFC Global Services (UK) Limited",
+		"entityid": "Test",
+		"levels": [
+			{
+				"level": "3",
+				"name": "Wealth & Personal Banking IT",
+				"code": "1"
+			},
+			{
+				"level": "4",
+				"name": "Customer & Product",
+				"code": "2"
+			},
+			{
+				"level": "5",
+				"name": "Fraud",
+				"code": "12"
+			}
+		],
+		"cost_centre": "301385"
+	},
+	"uploadedat": {
+		"$numberLong": "1708587935864"
+	},
+	"updatedat": {
+		"$numberLong": "1708588033438"
+	},
+	"createdby": "John1",
+	"updatedby": "John1",
+	"version": {
+		"$numberLong": "0"
+	},
+	"_class": "com.xlrt.datahub.infra.persistence.entities.documents.DocTraitDocument"
+}
+]

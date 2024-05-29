@@ -1,0 +1,344 @@
+[{
+	"dmscode": "5ea0a0284d194dd38c4bbb0a1622ef7b",
+	"documentname": "NBFC_PO_123_with Attachments_v4_Final_Redacted.pdf",
+	"doctype": "PO",
+	"tenantid": "5152ede3-7b9f-481a-9765-e881f0735866",
+	"period": {
+		"ptype": "DAY",
+		"year": 0,
+		"ptypeidx": 0,
+		"periodidx": 0
+	},
+	"kvTableData": [
+		{
+			"tableId": "1",
+			"tableSeq": 1,
+			"tableDefinitionKey": "DESCRIPTION",
+			"attributeMetadata": {
+				"item_desc": "Description",
+				"item_code": "HSN Code",
+				"quantity": "Quantity",
+				"unit_price": "Unit Price",
+				"total_price": "Total Price"
+			},
+			"tableCellData": [
+				{
+					"cellId": "639ec890-9372-4768-90c7-656d2015d9bc",
+					"rowId": "74695a2b-838f-478c-a207-d69c9e7ee9e7",
+					"attribute": "item_desc",
+					"value": "SW. TPS: 64455_15/08/2022_30/11/2022_BP: 811262-CTB-100%_Country:United Kingdom_Archer:ENG- 2116380_Contract:NA_Vendor: Riskent Technologies Limited L4: WPB Technology Management"
+				},
+				{
+					"cellId": "639ec890-9372-4768-90c7-656d2015d9bc",
+					"rowId": "74695a2b-838f-478c-a207-d69c9e7ee9e7",
+					"attribute": "item_code",
+					"value": ""
+				},
+				{
+					"cellId": "639ec890-9372-4768-90c7-656d2015d9bc",
+					"rowId": "74695a2b-838f-478c-a207-d69c9e7ee9e7",
+					"attribute": "quantity",
+					"value": ""
+				},
+				{
+					"cellId": "639ec890-9372-4768-90c7-656d2015d9bc",
+					"rowId": "74695a2b-838f-478c-a207-d69c9e7ee9e7",
+					"attribute": "unit_price",
+					"value": "256,000.00"
+				},
+				{
+					"cellId": "639ec890-9372-4768-90c7-656d2015d9bc",
+					"rowId": "74695a2b-838f-478c-a207-d69c9e7ee9e7",
+					"attribute": "total_price",
+					"value": "256,000.00"
+				}
+			]
+		},
+		{
+			"tableId": "2",
+			"tableSeq": 2,
+			"tableDefinitionKey": "ATTACHMENTS",
+			"attributeMetadata": {
+				"file_name": "File Name",
+				"file_type": "File Type",
+				"title": "Title",
+				"description": "Description"
+			},
+			"tableCellData": [
+				{
+					"cellId": "9a548d83-42ec-46f9-a052-ce111ce24e71",
+					"rowId": "de280721-267f-4327-9ec5-581b713a245d",
+					"attribute": "file_name",
+					"value": "Idemia Commercial Proposal - GLCM Mobile"
+				},
+				{
+					"cellId": "9a548d83-42ec-46f9-a052-ce111ce24e71",
+					"rowId": "de280721-267f-4327-9ec5-581b713a245d",
+					"attribute": "file_type",
+					"value": "File"
+				},
+				{
+					"cellId": "9a548d83-42ec-46f9-a052-ce111ce24e71",
+					"rowId": "de280721-267f-4327-9ec5-581b713a245d",
+					"attribute": "title",
+					"value": "Idemia Commercial Proposal -G"
+				},
+				{
+					"cellId": "9a548d83-42ec-46f9-a052-ce111ce24e71",
+					"rowId": "de280721-267f-4327-9ec5-581b713a245d",
+					"attribute": "description",
+					"value": ""
+				}
+			]
+		}
+	],
+	"elements": [
+		{
+			"fieldname": "form_type",
+			"value": "Purchase Order"
+		},
+		{
+			"srcid": "23779f464a104482ba42f00ced234290",
+			"fieldname": "cost_centre",
+			"value": "201157",
+			"label": "Cost Centre",
+			"logicalname": "Purpose.cost_centre"
+		},
+		{
+			"fieldname": "contract_start_date",
+			"value": "15/08/2022",
+			"label": "Contract Start Date",
+			"logicalname": "Terms.Time Of Performance.contract_start_date"
+		},
+		{
+			"fieldname": "contract_end_date",
+			"value": "30/11/2022",
+			"label": "Contract End Date",
+			"logicalname": "Terms.Time Of Performance.contract_end_date"
+		},
+		{
+			"fieldname": "spend_sub_category",
+			"value": "sw",
+			"label": "Spend Sub Category",
+			"logicalname": "Purpose.spend_sub_category"
+		},
+		{
+			"fieldname": "archer-id_5152ede3-7b9f-481a-9765-e881f0735866",
+			"value": "ENG- 2116380",
+			"label": "Archer ID",
+			"logicalname": "Lineitems.Item Description.archer-id_5152ede3-7b9f-481a-9765-e881f0735866"
+		},
+		{
+			"fieldname": "ctb-percentage_5152ede3-7b9f-481a-9765-e881f0735866",
+			"value": "100%",
+			"label": "CTB %",
+			"logicalname": "Lineitems.Item Description.ctb-percentage_5152ede3-7b9f-481a-9765-e881f0735866"
+		},
+		{
+			"fieldname": "country_legal_entity",
+			"value": "United Kingdom",
+			"label": "Country",
+			"logicalname": "Party.Buyer Country.country_legal_entity"
+		},
+		{
+			"fieldname": "bp_5152ede3-7b9f-481a-9765-e881f0735866",
+			"value": "811262",
+			"label": "BP",
+			"logicalname": "Lineitems.Item Description.bp_5152ede3-7b9f-481a-9765-e881f0735866"
+		},
+		{
+			"srcid": "577d99b278ae4236b78af6420503aa9f",
+			"fieldname": "supplier_name",
+			"value": "RISKENT TECHNOLOGIES LTD",
+			"label": "Supplier Name (Extracted)",
+			"logicalname": "Party.Supplier.supplier_name"
+		},
+		{
+			"srcid": "f30667314d45407dbb5c2cf975941b21",
+			"fieldname": "receiver_name",
+			"value": "NBFC Global Services (UK) Limited",
+			"label": "Receiver Name",
+			"logicalname": "Party.Buyer.receiver_name"
+		},
+		{
+			"srcid": "82c7fda2da3e4172948a1e61e0a4871d",
+			"fieldname": "receiver_address",
+			"value": "8 Canada Square LONDON E14 5HQ",
+			"label": "Receiver's Address",
+			"logicalname": "Party.Buyer Address.receiver_address"
+		},
+		{
+			"srcid": "325adcafd9f0491eb708558eca3ab9e7",
+			"fieldname": "supplier_address",
+			"value": "9 LAKE END COURT TAPLOW ROAD TAPLOW BUCKINGHAMSHIRE SL6 0JQ",
+			"label": "Supplier's Address",
+			"logicalname": "Party.Supplier Address.supplier_address"
+		},
+		{
+			"srcid": "b8a09babec784b4c987882c515339c6d",
+			"fieldname": "purchase_order_date",
+			"value": "07/11/2022",
+			"label": "Purchase Order Date",
+			"logicalname": "Identifier.Document Date.purchase_order_date"
+		},
+		{
+			"srcid": "1c5d0325f4944cb2b642988742cc6821",
+			"fieldname": "receiver_email",
+			"value": "dev.ram@nbfc.co.in",
+			"label": "Receiver's E-mail",
+			"logicalname": "Party.Buyer Coordinates.receiver_email"
+		},
+		{
+			"srcid": "ad53eecb7eba483dae0d43333eada0a3",
+			"fieldname": "contract_number",
+			"value": "ECM175735",
+			"label": "Contract Number",
+			"logicalname": "Identifier.Contract Number.contract_number"
+		},
+		{
+			"srcid": "f2e04bd8da3c40cd9b853f1deed796f2",
+			"fieldname": "net_amount",
+			"value": "30,000.00",
+			"label": "Total Order Amount",
+			"logicalname": "Value.PO Value.net_amount"
+		},
+		{
+			"fieldname": "currency",
+			"value": "GBP",
+			"label": "Currency",
+			"logicalname": "Value.Currency Of Transaction.currency"
+		},
+		{
+			"srcid": "acf228c2eecf466daa9f65a882388c39",
+			"fieldname": "revision_number",
+			"value": "0",
+			"label": "Revision Number",
+			"logicalname": "Purpose.revision_number"
+		},
+		{
+			"srcid": "9c0e3b1ed73a4ac5aee69e01cc68ff6e",
+			"fieldname": "due_date",
+			"value": "27/10/2022",
+			"label": "Delivery Date",
+			"logicalname": "Terms.Time Of Performance.due_date"
+		},
+		{
+			"fieldname": "receiver_gst",
+			"value": "",
+			"label": "Receiver Tax Id",
+			"logicalname": "Party.Buyer Tax Identifier.receiver_gst"
+		},
+		{
+			"fieldname": "supplier_email",
+			"value": "",
+			"label": "Supplier's E-mail",
+			"logicalname": "Party.Supplier Coordinates.supplier_email"
+		},
+		{
+			"fieldname": "supplier_gst",
+			"value": "",
+			"label": "Supplier Tax Id",
+			"logicalname": "Party.Supplier Tax Identifier.supplier_gst"
+		},
+		{
+			"fieldname": "vendor_name",
+			"value": "",
+			"label": "Supplier Name",
+			"logicalname": "Party.Supplier.vendor_name"
+		},
+		{
+			"fieldname": "intermediary_type",
+			"value": "",
+			"label": "Intermediary Type",
+			"logicalname": "Party.Intermediary.intermediary_type"
+		},
+		{
+			"fieldname": "purchase_id",
+			"value": "PO89000788",
+			"label": "Purchase Order Number",
+			"logicalname": "Identifier.Document Reference.purchase_id"
+		},
+		{
+			"fieldname": "revision_date",
+			"value": "",
+			"label": "Revision Date",
+			"logicalname": "Terms.Time Of Performance.revision_date"
+		},
+		{
+			"fieldname": "delivery_terms",
+			"value": "",
+			"label": "Delivery Terms",
+			"logicalname": "Terms.Delivery.delivery_terms"
+		},
+		{
+			"fieldname": "shipment_type",
+			"value": "",
+			"label": "Shipment Type",
+			"logicalname": "Terms.Shipment.shipment_type"
+		},
+		{
+			"fieldname": "cta-percentage_5152ede3-7b9f-481a-9765-e881f0735866",
+			"value": "",
+			"label": "CTA %",
+			"logicalname": "Lineitems.Item Description.cta-percentage_5152ede3-7b9f-481a-9765-e881f0735866"
+		},
+		{
+			"fieldname": "rtb-percentage_5152ede3-7b9f-481a-9765-e881f0735866",
+			"value": "",
+			"label": "RTB %",
+			"logicalname": "Lineitems.Item Description.rtb-percentage_5152ede3-7b9f-481a-9765-e881f0735866"
+		},
+		{
+			"fieldname": "report_currency",
+			"value": "USD",
+			"label": "Reporting Currency",
+			"logicalname": "Report.report_currency"
+		}
+	],
+	"levels": [
+		{
+			"_id": "1",
+			"level": "3",
+			"name": "Wealth & Personal Banking IT"
+		},
+		{
+			"_id": "2",
+			"level": "4",
+			"name": "Customer & Product"
+		},
+		{
+			"_id": "12",
+			"level": "5",
+			"name": "Fraud"
+		}
+	],
+	"entity": {
+		"code": "Test",
+		"label": "",
+		"finendmonthindex": 0
+	},
+	"currency": {},
+	"version": 1,
+	"revision": 0,
+	"documentdate": {
+		"$numberLong": "1667779200000"
+	},
+	"docuploadtimestamp": {
+		"$numberLong": "1708519401606"
+	},
+	"updatedat": {
+		"$numberLong": "1708521971593"
+	},
+	"uploadby": "John1",
+	"duplicate": false,
+	"closed": false,
+	"vendordetails": {},
+	"internalid": "04.05.0000005",
+	"sowid": "ECM175735",
+	"internalsowid": "03.04.000002",
+	"vendormatch": true,
+	"isrestrict": false,
+	"dfdetails": [],
+	"sequence": 0,
+	"_class": "com.prm.xlrt.kv.infra.persistence.entities.KVDataDocument"
+}]

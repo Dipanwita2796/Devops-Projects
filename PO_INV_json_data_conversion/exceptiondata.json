@@ -1,0 +1,14 @@
+[{
+	"processid": "PRS_000001",
+	"processtype": "PARSING",
+	"processname": "PO Parsing",
+	"affecteddocs": [],
+	"processextrainfos": {},
+	"processexceptionversion": {
+		"$numberLong": "11"
+	},
+	"exceptiongenerationtime": {
+		"$numberLong": "1708588031173"
+	},
+	"_class": "com.prm.xlrt.exception.directory.infra.persistence.entities.ExceptionDataDocument"
+}]
