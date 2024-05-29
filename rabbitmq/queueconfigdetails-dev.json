@@ -1,0 +1,4053 @@
+{
+	"queues": [
+		{
+			"name": "bs_analysis_end_queue",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "agreement.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "processing.state.change.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "bst.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "pa.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "text.df.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-extraction_model_service_bank",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "inv.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "doc.postextraction.metadata.new",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-lstm_model_service_id",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "extraction.request.java.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "multidoc.extraction.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "doc.processing.statechanges.priority",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "billing.request.internal.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "multidoc.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "agreement_leegality.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "gst.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "kv.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.raw.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "bst.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "nclt.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "gst.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "mgt7.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "priority_queue",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-max-priority": 5,
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.graph.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "fst.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "bst.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "po.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "statechange_receiver",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-extraction_model_floaty_service_inv",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-extraction_model_floaty_service_nclt",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "fst.insights.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "frm.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-detection_model_floaty_service_inv",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc.graph.queue",
+			"vhost": "/",
+			"durable": false,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "la.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "nclt.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "kv.df.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "frm.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-detection_model_floaty_service_bst",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "kvfin.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "doc.killed",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "Fin_Page_Identification",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-rotation_model_floaty_service_fst",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-rotation_model_floaty_service_nclt",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "aoc4.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "billing.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "ptr.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "general.extraction.response.new",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "mcaf.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "kvfin.extraction.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "fst.insights.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-extraction_model_service_id",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "msa.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "kvfin.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "dataframe.trait.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "pa.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "kv.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "nclt.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "inv.extraction.request.test",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-rotation_model_floaty_service_bst",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-rotation_model_service_id",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "doc.test",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "inv.data.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "bst.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "cam.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "entity.trait.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "inv.extraction.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "frm.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-rotation_model_floaty_service_gst",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "frm.extraction.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "entity.trait.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-identification_model_service",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "bst.classification.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "po.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "annual_page_extraction",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+			    "x-max-priority": 255
+			}
+		},
+		{
+			"name": "rpc-rotation_model_service",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "multidoc.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.extraction.request.internal.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "gst.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "sps.extraction.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "statechange.alert",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "doc.priority",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.insights.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "inv.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "nclt.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-extraction_model_floaty_service_gst",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-rotation_service",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "shareholders.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "kv.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "ptr.extraction.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "agreement_leegality.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "bank_reference_letter.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "dataframe.trait.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "sho.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "bank_reference_letter.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "bst.API",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "fst.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "inv.extraction.response.test",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "doc.trait.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-extraction_model_floaty_service_bst",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "fst.som.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-identification_model_service_new",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "doc.priority.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-lstm_model_floaty",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "inv.data.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "cam.extraction.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "ptr.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "mcaf.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "ar.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "gst.extraction.request.internal.test",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "sps.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "la",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "esg.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "agreement.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "doc.test.priority",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "cam.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "sps.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "processing.state.change",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "doc.postextraction.metadata",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "bank_reference_letter.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-translation_model_floaty_service_im",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "log.dump.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.coordinate.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "la.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-rotation_model_floaty_service_inv",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "inv.data.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-table_detection_model_service_id",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-detection_model_floaty_service_nclt",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "ptr.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "shareholders.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "gst.extraction.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "bst.extraction.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "mcaf.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-detection_model_floaty_service_fst",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "general.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "multidoc.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "shareholders.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "esg.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "doc.killed.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "annual_page_extraction_java_que",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "inv.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "ptr.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "kv.extraction.request.internal.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-detection_model_floaty_service_gst",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-table_detection_notes_model_service",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "general.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "sps.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "log.dump.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "inv.anomalydata.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "text.df.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.graph.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "inv.data.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.som.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "extraction.request.java",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc-cleaning_model_floaty_service",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "fst.extraction.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.insights.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "doc.postextraction.metadata.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-extraction_model_floaty_service_fst",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "fst.som.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "bst.classification.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.coordinate.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "general.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "agreement_it.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "doc.Processing.StateChange.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "frm.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "cam.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "sps.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "kvfin.extraction.response.test",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "rpc.lemma.queue",
+			"vhost": "/",
+			"durable": false,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "bst.classification.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "ds.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "agreement.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "doc.trait.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "notes_page_extraction",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+			    "x-max-priority": 255
+			}
+		},
+		{
+			"name": "doc.processing.statechanges",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "bs_analysis_start_queue",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "agreement.extraction.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "Classification_mapping",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+			    "x-max-priority": 255
+			}
+		},
+		{
+			"name": "rpc-extraction_model_floaty_service_im",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "multidoc.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "agreement.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "cam.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "doc.processing.statechanges.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.raw.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "kvfin.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "kv.df.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "shareholders.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "agreement_it.extraction.request",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "general.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "doc.processing.statechanges.new",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "fst.som.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "kv.extraction.request.internal",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "inv.extraction.request.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "sho.extraction.response",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "gst.extraction.response.duplicate",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		},
+		{
+			"name": "model_wakeup_queue",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {
+				"x-queue-type": "classic"
+			}
+		},
+		{
+			"name": "rpc-detection_model_service",
+			"vhost": "/",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		}
+	],
+	"exchanges": [
+		{
+			"name": "parseRequests",
+			"vhost": "/",
+			"type": "topic",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		},
+		{
+			"name": "graphRequest",
+			"vhost": "/",
+			"type": "topic",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		},
+		{
+			"name": "documentPriority",
+			"vhost": "/",
+			"type": "direct",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		},
+		{
+			"name": "billingMessages",
+			"vhost": "/",
+			"type": "direct",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		},
+		{
+			"name": "dataRequest",
+			"vhost": "/",
+			"type": "topic",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		},
+		{
+			"name": "dataResponse",
+			"vhost": "/",
+			"type": "topic",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		},
+		{
+			"name": "nameko-rpc",
+			"vhost": "/",
+			"type": "topic",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		},
+		{
+			"name": "parseResponses",
+			"vhost": "/",
+			"type": "topic",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		},
+		{
+			"name": "documentCoordinates",
+			"vhost": "/",
+			"type": "topic",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		},
+		{
+			"name": "docProcessingStateChange",
+			"vhost": "/",
+			"type": "topic",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		},
+		{
+			"name": "graphResponse",
+			"vhost": "/",
+			"type": "topic",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		}
+	],
+	"bindings": [
+		{
+			"source": "billingMessages",
+			"vhost": "/",
+			"destination": "billing.request.internal",
+			"destination_type": "queue",
+			"routing_key": "billing.request",
+			"arguments": {}
+		},
+		{
+			"source": "billingMessages",
+			"vhost": "/",
+			"destination": "billing.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "billing.request",
+			"arguments": {}
+		},
+		{
+			"source": "dataRequest",
+			"vhost": "/",
+			"destination": "bst.classification.request",
+			"destination_type": "queue",
+			"routing_key": "bst.classification.request",
+			"arguments": {}
+		},
+		{
+			"source": "dataRequest",
+			"vhost": "/",
+			"destination": "bst.classification.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "bst.classification.request",
+			"arguments": {}
+		},
+		{
+			"source": "dataRequest",
+			"vhost": "/",
+			"destination": "fst.insights.request",
+			"destination_type": "queue",
+			"routing_key": "fst.insights.request",
+			"arguments": {}
+		},
+		{
+			"source": "dataRequest",
+			"vhost": "/",
+			"destination": "fst.insights.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "fst.insights.request",
+			"arguments": {}
+		},
+		{
+			"source": "dataRequest",
+			"vhost": "/",
+			"destination": "fst.som.request",
+			"destination_type": "queue",
+			"routing_key": "fst.som.request",
+			"arguments": {}
+		},
+		{
+			"source": "dataRequest",
+			"vhost": "/",
+			"destination": "fst.som.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "fst.som.request",
+			"arguments": {}
+		},
+		{
+			"source": "dataResponse",
+			"vhost": "/",
+			"destination": "bst.classification.request",
+			"destination_type": "queue",
+			"routing_key": "bst.classification.request",
+			"arguments": {}
+		},
+		{
+			"source": "dataResponse",
+			"vhost": "/",
+			"destination": "bst.classification.response",
+			"destination_type": "queue",
+			"routing_key": "bst.classification.response",
+			"arguments": {}
+		},
+		{
+			"source": "dataResponse",
+			"vhost": "/",
+			"destination": "bst.classification.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "bst.classification.response",
+			"arguments": {}
+		},
+		{
+			"source": "dataResponse",
+			"vhost": "/",
+			"destination": "fst.insights.response",
+			"destination_type": "queue",
+			"routing_key": "fst.insights.response",
+			"arguments": {}
+		},
+		{
+			"source": "dataResponse",
+			"vhost": "/",
+			"destination": "fst.insights.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "fst.insights.response",
+			"arguments": {}
+		},
+		{
+			"source": "dataResponse",
+			"vhost": "/",
+			"destination": "fst.som.response",
+			"destination_type": "queue",
+			"routing_key": "fst.som.response",
+			"arguments": {}
+		},
+		{
+			"source": "dataResponse",
+			"vhost": "/",
+			"destination": "fst.som.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "fst.som.response",
+			"arguments": {}
+		},
+		{
+			"source": "docProcessingStateChange",
+			"vhost": "/",
+			"destination": "doc.Processing.StateChange.duplicate",
+			"destination_type": "queue",
+			"routing_key": "doc.processing.statechanges",
+			"arguments": {}
+		},
+		{
+			"source": "docProcessingStateChange",
+			"vhost": "/",
+			"destination": "doc.processing.statechanges",
+			"destination_type": "queue",
+			"routing_key": "doc.processing.statechanges",
+			"arguments": {}
+		},
+		{
+			"source": "docProcessingStateChange",
+			"vhost": "/",
+			"destination": "doc.processing.statechanges.duplicate",
+			"destination_type": "queue",
+			"routing_key": "doc.processing.statechanges",
+			"arguments": {}
+		},
+		{
+			"source": "docProcessingStateChange",
+			"vhost": "/",
+			"destination": "doc.processing.statechanges.new",
+			"destination_type": "queue",
+			"routing_key": "doc.processing.statechanges",
+			"arguments": {}
+		},
+		{
+			"source": "docProcessingStateChange",
+			"vhost": "/",
+			"destination": "doc.processing.statechanges.priority",
+			"destination_type": "queue",
+			"routing_key": "doc.processing.statechanges",
+			"arguments": {}
+		},
+		{
+			"source": "docProcessingStateChange",
+			"vhost": "/",
+			"destination": "statechange.alert",
+			"destination_type": "queue",
+			"routing_key": "doc.processing.statechanges",
+			"arguments": {}
+		},
+		{
+			"source": "docProcessingStateChange",
+			"vhost": "/",
+			"destination": "statechange_receiver",
+			"destination_type": "queue",
+			"routing_key": "doc.processing.statechanges",
+			"arguments": {}
+		},
+		{
+			"source": "docProcessingStateChange",
+			"vhost": "/",
+			"destination": "processing.state.change",
+			"destination_type": "queue",
+			"routing_key": "processing.state.change",
+			"arguments": {}
+		},
+		{
+			"source": "docProcessingStateChange",
+			"vhost": "/",
+			"destination": "processing.state.change.duplicate",
+			"destination_type": "queue",
+			"routing_key": "processing.state.change",
+			"arguments": {}
+		},
+		{
+			"source": "documentCoordinates",
+			"vhost": "/",
+			"destination": "fst.coordinate.response",
+			"destination_type": "queue",
+			"routing_key": "fst.coordinate.response",
+			"arguments": {}
+		},
+		{
+			"source": "documentCoordinates",
+			"vhost": "/",
+			"destination": "fst.coordinate.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "fst.coordinate.response",
+			"arguments": {}
+		},
+		{
+			"source": "documentPriority",
+			"vhost": "/",
+			"destination": "doc.killed",
+			"destination_type": "queue",
+			"routing_key": "doc.killed",
+			"arguments": {}
+		},
+		{
+			"source": "documentPriority",
+			"vhost": "/",
+			"destination": "doc.killed.duplicate",
+			"destination_type": "queue",
+			"routing_key": "doc.killed",
+			"arguments": {}
+		},
+		{
+			"source": "documentPriority",
+			"vhost": "/",
+			"destination": "doc.priority",
+			"destination_type": "queue",
+			"routing_key": "doc.priority",
+			"arguments": {}
+		},
+		{
+			"source": "documentPriority",
+			"vhost": "/",
+			"destination": "doc.priority.duplicate",
+			"destination_type": "queue",
+			"routing_key": "doc.priority",
+			"arguments": {}
+		},
+		{
+			"source": "graphResponse",
+			"vhost": "/",
+			"destination": "fst.graph.response",
+			"destination_type": "queue",
+			"routing_key": "fst.graph.response",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-cleaning_model_floaty_service",
+			"destination_type": "queue",
+			"routing_key": "cleaning_model_floaty_service.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-detection_model_floaty_service_bst",
+			"destination_type": "queue",
+			"routing_key": "detection_model_floaty_service_bst.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-detection_model_floaty_service_fst",
+			"destination_type": "queue",
+			"routing_key": "detection_model_floaty_service_fst.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-detection_model_floaty_service_gst",
+			"destination_type": "queue",
+			"routing_key": "detection_model_floaty_service_gst.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-detection_model_floaty_service_inv",
+			"destination_type": "queue",
+			"routing_key": "detection_model_floaty_service_inv.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-detection_model_floaty_service_nclt",
+			"destination_type": "queue",
+			"routing_key": "detection_model_floaty_service_nclt.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-detection_model_service",
+			"destination_type": "queue",
+			"routing_key": "detection_model_service.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-extraction_model_floaty_service_bst",
+			"destination_type": "queue",
+			"routing_key": "extraction_model_floaty_service_bst.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-extraction_model_floaty_service_fst",
+			"destination_type": "queue",
+			"routing_key": "extraction_model_floaty_service_fst.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-extraction_model_floaty_service_gst",
+			"destination_type": "queue",
+			"routing_key": "extraction_model_floaty_service_gst.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-extraction_model_floaty_service_im",
+			"destination_type": "queue",
+			"routing_key": "extraction_model_floaty_service_im.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-extraction_model_floaty_service_inv",
+			"destination_type": "queue",
+			"routing_key": "extraction_model_floaty_service_inv.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-extraction_model_floaty_service_nclt",
+			"destination_type": "queue",
+			"routing_key": "extraction_model_floaty_service_nclt.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-extraction_model_service_bank",
+			"destination_type": "queue",
+			"routing_key": "extraction_model_service_bank.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-extraction_model_service_id",
+			"destination_type": "queue",
+			"routing_key": "extraction_model_service_id.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-identification_model_service",
+			"destination_type": "queue",
+			"routing_key": "identification_model_service.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-identification_model_service_new",
+			"destination_type": "queue",
+			"routing_key": "identification_model_service_new.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-lstm_model_floaty",
+			"destination_type": "queue",
+			"routing_key": "lstm_model_floaty.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-lstm_model_service_id",
+			"destination_type": "queue",
+			"routing_key": "lstm_model_service_id.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-rotation_model_floaty_service_bst",
+			"destination_type": "queue",
+			"routing_key": "rotation_model_floaty_service_bst.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-rotation_model_floaty_service_fst",
+			"destination_type": "queue",
+			"routing_key": "rotation_model_floaty_service_fst.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-rotation_model_floaty_service_gst",
+			"destination_type": "queue",
+			"routing_key": "rotation_model_floaty_service_gst.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-rotation_model_floaty_service_inv",
+			"destination_type": "queue",
+			"routing_key": "rotation_model_floaty_service_inv.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-rotation_model_floaty_service_nclt",
+			"destination_type": "queue",
+			"routing_key": "rotation_model_floaty_service_nclt.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-rotation_model_service",
+			"destination_type": "queue",
+			"routing_key": "rotation_model_service.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-rotation_model_service_id",
+			"destination_type": "queue",
+			"routing_key": "rotation_model_service_id.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-rotation_service",
+			"destination_type": "queue",
+			"routing_key": "rotation_service.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-table_detection_model_service_id",
+			"destination_type": "queue",
+			"routing_key": "table_detection_model_service_id.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-table_detection_notes_model_service",
+			"destination_type": "queue",
+			"routing_key": "table_detection_notes_model_service.*",
+			"arguments": {}
+		},
+		{
+			"source": "nameko-rpc",
+			"vhost": "/",
+			"destination": "rpc-translation_model_floaty_service_im",
+			"destination_type": "queue",
+			"routing_key": "translation_model_floaty_service_im.*",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "agreement.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "agreement.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "agreement.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "agreement_it.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "agreement_it.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "agreement_it.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "agreement_leegality.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "agreement_leegality.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "agreement_leegality.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "aoc4.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "aoc4.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "aoc4.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "mcaf.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "aoc4.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "mcaf.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "aoc4.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "ar.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "ar.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "ar.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "bank_reference_letter.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "bank_reference_letter.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "multidoc.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "bank_reference_letter.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "bst.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "bst.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "bst.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "bst.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "bst.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "bst.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "bst.API",
+			"destination_type": "queue",
+			"routing_key": "bstapi.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "cam.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "cam.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "cam.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "cam.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "cam.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "cam.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "ds.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "ds.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "ds.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "ds.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "ds.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "esg.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "esg.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "esg.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "extraction.request.java",
+			"destination_type": "queue",
+			"routing_key": "extraction.request.java",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "extraction.request.java.duplicate",
+			"destination_type": "queue",
+			"routing_key": "extraction.request.java",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "extraction.request.java",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "extraction.request.java",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "extraction.request.java",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kvfin.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "extraction.request.java",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kvfin.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "extraction.request.java",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "frm.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "frm.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "frm.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kvfin.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kvfin.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "fst.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "fst.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "fst.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "fst.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "fst.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "fst.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "fst.extraction.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "fst.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "fst.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "fst.extraction.request.internal",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "fst.extraction.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "fst.extraction.request.internal",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "fst.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "fst.extraction.requests",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "general.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "general.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "general.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "general.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "gst.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "gst.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "gst.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "gst.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "gst.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "gst.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "inv.data.request",
+			"destination_type": "queue",
+			"routing_key": "inv.data.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "inv.data.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "inv.data.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "inv.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "inv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "inv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "inv.extraction.request.test",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.request.test",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "frm.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "kyc.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "la.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "la.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "la.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "mcaf.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "mcaf.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kvfin.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "mcaf.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kvfin.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "mcaf.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "mcaf.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "mcaf.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "mcaf.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "mcaf.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "mgt7.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "mgt7.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "mgt7.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "mcaf.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "mgt7.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "mcaf.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "mgt7.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "msa.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "msa.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "msa.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "multidoc.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "multidoc.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "multidoc.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "multidoc.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "multidoc.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "multidoc.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kvfin.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kvfin.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "nclt.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "nclt.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "npx.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "npx.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "agreement.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "npx.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "inv.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "pa.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "inv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "pa.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "pa.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "pa.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "pa.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "pa.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "pa.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "inv.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "po.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "inv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "po.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "inv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "po.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "po.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "po.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "po.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "po.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "po.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "ptr.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "ptr.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "ptr.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "ptr.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "ptr.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "ptr.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kvfin.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kvfin.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "shareholders.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "shareholders.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "sho.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "sho.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kv.extraction.request.internal.duplicate",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "kvfin.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "sps.extraction.request",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "sps.extraction.request.duplicate",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseRequests",
+			"vhost": "/",
+			"destination": "sps.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "agreement.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "agreement.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "agreement.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "agreement.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "annual_page_extraction_java_que",
+			"destination_type": "queue",
+			"routing_key": "annual_page_extraction",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "bank_reference_letter.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "bank_reference_letter.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "bank_reference_letter.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "bank_reference_letter.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "bst.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "bst.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "bst.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "bst.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "cam.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "cam.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "cam.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "cam.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "dataframe.trait.response",
+			"destination_type": "queue",
+			"routing_key": "dataframe.trait.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "dataframe.trait.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "dataframe.trait.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "doc.postextraction.metadata",
+			"destination_type": "queue",
+			"routing_key": "doc.postextraction.metadata",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "doc.postextraction.metadata.duplicate",
+			"destination_type": "queue",
+			"routing_key": "doc.postextraction.metadata",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "doc.postextraction.metadata.new",
+			"destination_type": "queue",
+			"routing_key": "doc.postextraction.metadata",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "doc.trait.response",
+			"destination_type": "queue",
+			"routing_key": "doc.trait.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "doc.trait.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "doc.trait.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "entity.trait.response",
+			"destination_type": "queue",
+			"routing_key": "entity.trait.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "entity.trait.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "entity.trait.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "frm.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "frm.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "frm.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "fst.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "fst.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "fst.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "fst.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "fst.raw.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "fst.raw.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "fst.raw.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "fst.raw.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "general.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "general.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "general.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "general.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "general.extraction.response.new",
+			"destination_type": "queue",
+			"routing_key": "general.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "gst.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "gst.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "gst.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "gst.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "gst.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "gst.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "gst.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "gst.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "inv.anomalydata.response",
+			"destination_type": "queue",
+			"routing_key": "inv.anomalydata.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "inv.data.response",
+			"destination_type": "queue",
+			"routing_key": "inv.data.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "inv.data.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "inv.data.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "inv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "inv.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "inv.extraction.response.test",
+			"destination_type": "queue",
+			"routing_key": "inv.extraction.response.test",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.df.response",
+			"destination_type": "queue",
+			"routing_key": "kv.df.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.df.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "kv.df.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "kv.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "kv.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "log.dump.response",
+			"destination_type": "queue",
+			"routing_key": "log.dump.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "log.dump.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "log.dump.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "mcaf.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "mcaf.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "mcaf.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "mcaf.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "mcaf.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "mcaf.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "mcaf.extraction.response\t",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "multidoc.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "multidoc.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "multidoc.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "multidoc.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "nclt.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "nclt.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "nclt.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "inv.extraction.request.internal",
+			"destination_type": "queue",
+			"routing_key": "pa.extraction.request",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "pa.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "pa.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "pa.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "pa.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "po.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "po.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "po.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "po.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "ptr.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "ptr.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "ptr.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "ptr.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "ptr.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "ptr.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "ptr.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "ptr.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "shareholders.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "shareholders.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "shareholders.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "sho.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "sho.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kv.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "kvfin.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "sps.extraction.response",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "sps.extraction.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "sps.extraction.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "text.df.response",
+			"destination_type": "queue",
+			"routing_key": "text.df.response",
+			"arguments": {}
+		},
+		{
+			"source": "parseResponses",
+			"vhost": "/",
+			"destination": "text.df.response.duplicate",
+			"destination_type": "queue",
+			"routing_key": "text.df.response",
+			"arguments": {}
+		}
+	]
+}
