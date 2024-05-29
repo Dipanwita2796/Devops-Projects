@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-service
+spec:
+  selector:
+    matchLabels:
+      app: notification-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: notification-service
+    spec:
+      containers:
+      - name: notification-service
+        image: 647223405008.dkr.ecr.me-central-1.amazonaws.com/striderisk-delivery:notification-service_ubuntu_v0-52-0_20042023_dnb_live1
+        imagePullPolicy: IfNotPresent
+        #volumeMounts:
+         # - name: notification-service-logs
+          #  mountPath: /var/log/java/notification:/logs
+        #livenessProbe:
+         # exec:
+          #  command:
+           #  - cat
+            # - /notification-service/pom.xml
+          #initialDelaySeconds: 60
+          #periodSeconds: 10
+        readinessProbe:
+          tcpSocket:
+            port: 8099
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          timeoutSeconds: 30
+          failureThreshold: 10
+          successThreshold: 1
+        ports:
+        - containerPort: 8099
+        envFrom:
+          - configMapRef:
+              name: java-env-configmap
+        resources:
+          requests:
+            cpu: 500m
+            memory: "1000Mi"
+          limits:
+            cpu: 500m
+            memory: "1000Mi"

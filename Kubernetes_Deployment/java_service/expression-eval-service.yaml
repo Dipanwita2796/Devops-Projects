@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: expression-eval-service
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 8092
+    targetPort: 8092
+    protocol: TCP
+  selector:
+    app: expression-eval-service

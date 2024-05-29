@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expression-eval-service
+spec:
+  selector:
+    matchLabels:
+      app: expression-eval-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: expression-eval-service
+    spec:
+      containers:
+      - name: expression-eval-service
+        image: 647223405008.dkr.ecr.me-central-1.amazonaws.com/striderisk-delivery:expression-eval-service_ubuntu_v0-52-0_20042023_dnb_live1
+        imagePullPolicy: IfNotPresent
+        #volumeMounts:
+         # - name: expression-eval-service-logs
+          #  mountPath: /var/log/java/expressioneval:/logs
+        #livenessProbe:
+         # exec:
+          #  command:
+           #  - cat
+            # - /expression-eval-service/pom.xml
+          #initialDelaySeconds: 60
+          #periodSeconds: 10
+        readinessProbe:
+          tcpSocket:
+            port: 8092
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          timeoutSeconds: 30
+          failureThreshold: 10
+          successThreshold: 1
+        ports:
+        - containerPort: 8092
+        envFrom:
+          - configMapRef:
+              name: java-env-configmap
+        resources:
+          requests:
+            cpu: 500m
+            memory: "1000Mi"
+          limits:
+            cpu: 500m
+            memory: "1000Mi"

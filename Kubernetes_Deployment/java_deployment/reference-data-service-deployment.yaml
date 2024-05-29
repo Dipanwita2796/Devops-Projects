@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reference-data-service
+spec:
+  selector:
+    matchLabels:
+      app: reference-data-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: reference-data-service
+    spec:
+      containers:
+      - name: reference-data-service
+        image: 647223405008.dkr.ecr.me-central-1.amazonaws.com/striderisk-delivery:reference-data-service-v2_ubuntu_v0-52-0_20042023_dnb_live1
+        imagePullPolicy: IfNotPresent
+        #volumeMounts:
+        #  - name: reference-data-service-logs
+        #    mountPath: /var/log/java/reference:/logs
+        #livenessProbe:
+         # exec:
+          #  command:
+           #  - cat
+            # - /reference-data-service/pom.xml
+          #initialDelaySeconds: 60
+          #periodSeconds: 10
+        readinessProbe:
+          tcpSocket:
+            port: 8084
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          timeoutSeconds: 30
+          failureThreshold: 10
+          successThreshold: 1
+        ports:
+        - containerPort: 8084
+        envFrom:
+          - configMapRef:
+              name: java-env-configmap
+        resources:
+          requests:
+            cpu: 500m
+            memory: "1000Mi"
+          limits:
+            cpu: 500m
+            memory: "1000Mi"

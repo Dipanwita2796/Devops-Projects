@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expression-eval-service
+  labels: 
+    app: expression-eval-service
+spec:
+  selector:
+    matchLabels:
+      app: expression-eval-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: expression-eval-service
+    spec:
+      containers:
+      - name: expression-eval-service
+        image: 083887970427.dkr.ecr.ap-south-1.amazonaws.com/test:expression-eval-service_ubuntu_v0-61-0_10082023
+        imagePullPolicy: IfNotPresent
+        readinessProbe:
+          tcpSocket:
+            port: 8092
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          timeoutSeconds: 30
+          failureThreshold: 10
+          successThreshold: 1
+        ports:
+        - containerPort: 8092
+        envFrom:
+          - configMapRef:
+              name: java-env-configmap
+        resources:
+          requests:
+            cpu: 500m
+            memory: "1000Mi"
+          limits:
+            cpu: 500m
+            memory: "1000Mi"
+      nodeSelector:
+        eks.amazonaws.com/nodegroup: xlrt-java-app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: expression-eval-service
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 8092
+    targetPort: 8092
+    protocol: TCP
+  selector:
+    app: expression-eval-service
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: expression-eval-service
+  labels:
+    version: v1
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: expression-eval-service
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
+---
+
+

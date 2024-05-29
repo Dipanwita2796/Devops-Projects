@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gstitr-processor-service
+  labels:
+    app: gstitr-processor-service
+spec:
+  selector:
+    matchLabels:
+      app: gstitr-processor-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gstitr-processor-service
+    spec:
+      containers:
+      - name: gstitr-processor-service
+        image: 083887970427.dkr.ecr.ap-south-1.amazonaws.com/test:gstitr-processor-service_ubuntu_v0-61-0_10082023
+        imagePullPolicy: IfNotPresent
+        readinessProbe:
+          tcpSocket:
+            port: 8076
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          timeoutSeconds: 30
+          failureThreshold: 10
+          successThreshold: 1
+        ports:
+        - containerPort: 8076
+        envFrom:
+          - configMapRef:
+              name: java-env-configmap
+        resources:
+          requests:
+            cpu: 250m
+            memory: "500Mi"
+          limits:
+            cpu: 250m
+            memory: "500Mi"
+      nodeSelector:
+        eks.amazonaws.com/nodegroup: xlrt-java-app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gstitr-processor-service
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 8076
+    targetPort: 8076
+    protocol: TCP
+  selector:
+    app: gstitr-processor-service
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: gstitr-processor-service
+  labels:
+    version: v1
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: gstitr-processor-service
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
+---
+
+

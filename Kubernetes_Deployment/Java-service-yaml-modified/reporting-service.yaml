@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reporting-service
+  labels:
+    app: reporting-service
+spec:
+  selector:
+    matchLabels:
+      app: reporting-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: reporting-service
+    spec:
+      containers:
+      - name: reporting-service
+        image: 083887970427.dkr.ecr.ap-south-1.amazonaws.com/test:reporting-service_ubuntu_v0-61-0_10082023 
+        imagePullPolicy: IfNotPresent
+        readinessProbe:
+          tcpSocket:
+            port: 8104
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          timeoutSeconds: 30
+          failureThreshold: 10
+          successThreshold: 1
+        ports:
+        - containerPort: 8104
+        envFrom:
+          - configMapRef:
+              name: java-env-configmap
+        resources:
+          requests:
+            cpu: 250m
+            memory: "500Mi"
+          limits:
+            cpu: 250m
+            memory: "500Mi"
+      nodeSelector:
+        eks.amazonaws.com/nodegroup: xlrt-java-app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: reporting-service
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 8104
+    targetPort: 8104
+    protocol: TCP
+  selector:
+    app: reporting-service
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: reporting-service
+  labels:
+    version: v1
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: reporting-service
+  minReplicas: 1
+  maxReplicas: 70
+  targetCPUUtilizationPercentage: 70
+---
+
+

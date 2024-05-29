@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fst-fencing-service
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 8110
+    targetPort: 8110
+    protocol: TCP
+  selector:
+    app: fst-fencing-service

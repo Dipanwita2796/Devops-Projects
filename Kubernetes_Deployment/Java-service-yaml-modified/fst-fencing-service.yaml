@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fst-fencing-service
+  labels:
+    app: fst-fencing-service
+spec:
+  selector:
+    matchLabels:
+      app: fst-fencing-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: fst-fencing-service
+    spec:
+      containers:
+      - name: fst-fencing-service
+        image: 083887970427.dkr.ecr.ap-south-1.amazonaws.com/test:fst-fencing-service_ubuntu_v0-61-0_10082023
+        imagePullPolicy: IfNotPresent
+        readinessProbe:
+          tcpSocket:
+            port: 8110
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          timeoutSeconds: 30
+          failureThreshold: 10
+          successThreshold: 1
+        ports:
+        - containerPort: 8110
+        envFrom:
+          - configMapRef:
+              name: java-env-configmap
+        resources:
+          requests:
+            cpu: 500m
+            memory: "1000Mi"
+          limits:
+            cpu: 500m
+            memory: "1000Mi"
+      nodeSelector:
+        eks.amazonaws.com/nodegroup: xlrt-java-app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fst-fencing-service
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 8110
+    targetPort: 8110
+    protocol: TCP
+  selector:
+    app: fst-fencing-service
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: fst-fencing-service
+  labels:
+    version: v1
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: fst-fencing-service
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
+---
+
+
