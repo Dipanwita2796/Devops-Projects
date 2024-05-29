@@ -1,0 +1,114 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllAccess",
+      "Action": "s3:*",
+      "Effect": "Allow",
+      "Resource": [
+         "arn:aws:s3:::b2c-xlrt-dms",
+         "arn:aws:s3:::b2c-xlrt-dms/*"
+      ]
+    }
+  ]
+}
+
+
+aws iam create-policy --policy-name s3-policy-dnb-app --policy-document file://bucket_policy.json
+
+
+
+{
+    "Policy": {
+        "PolicyName": "s3-policy-dnb-app",
+        "PolicyId": "ANPARHCA43B5QDD4JYERZ",
+        "Arn": "arn:aws:iam::083887970427:policy/s3-policy-dnb-app",
+        "Path": "/",
+        "DefaultVersionId": "v1",
+        "AttachmentCount": 0,
+        "PermissionsBoundaryUsageCount": 0,
+        "IsAttachable": true,
+        "CreateDate": "2023-09-17T17:06:03+00:00",
+        "UpdateDate": "2023-09-17T17:06:03+00:00"
+    }
+}
+
+
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: s3-access-dnb
+  namespace: dnb-app
+  
+  
+  
+  
+  
+  
+  
+  {
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "arn:aws:iam::083887970427:oidc-provider/oidc.eks.us-west-2.amazonaws.com/id/226B0DDA4FD347621CA0882321FCE4E4"
+      },
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {
+        "StringEquals": {
+          "oidc.eks.us-west-2.amazonaws.com/id/226B0DDA4FD347621CA0882321FCE4E4:aud": "sts.amazonaws.com",
+          "oidc.eks.us-west-2.amazonaws.com/id/226B0DDA4FD347621CA0882321FCE4E4:sub": "system:serviceaccount:dnb-app:s3-access-dnb"
+        }
+      }
+    }
+  ]
+}
+
+
+aws iam create-role --role-name s3-access-dnb-app-test --assume-role-policy-document file://s3-trust-policy.json
+
+
+
+
+{
+    "Role": {
+        "Path": "/",
+        "RoleName": "s3-access-dnb-app-test",
+        "RoleId": "AROARHCA43B5T7EBUSUO3",
+        "Arn": "arn:aws:iam::083887970427:role/s3-access-dnb-app-test",
+        "CreateDate": "2023-09-17T17:17:58+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Federated": "arn:aws:iam::083887970427:oidc-provider/oidc.eks.us-west-2.amazonaws.com/id/226B0DDA4FD347621CA0882321FCE4E4"
+                    },
+                    "Action": "sts:AssumeRoleWithWebIdentity",
+                    "Condition": {
+                        "StringEquals": {
+                            "oidc.eks.us-west-2.amazonaws.com/id/226B0DDA4FD347621CA0882321FCE4E4:aud": "sts.amazonaws.com",
+                            "oidc.eks.us-west-2.amazonaws.com/id/226B0DDA4FD347621CA0882321FCE4E4:sub": "system:serviceaccount:dnb-app:s3-access-dnb"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+
+
+
+aws iam attach-role-policy --role-name s3-access-dnb-app-test --policy-arn=arn:aws:iam::083887970427:policy/s3-policy-dnb-app
+
+
+
+kubectl annotate serviceaccount -n dnb-app s3-access-dnb eks.amazonaws.com/role-arn=arn:aws:iam::083887970427:role/s3-access-dnb-app-test
+
+
+
+
+

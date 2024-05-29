@@ -1,0 +1,30 @@
+1)Go to aws->Route 53->hosted zone->create a new hosted zone(NS and SOA will be created)
+2)Sign in to go-daddy
+3)go to the required domain
+4)change the nameserver with the new nameserver created with hosted zone in aws
+5)create a free ssl certificate from lets-encrypt
+   a)install certbot in windows
+   b)run the following command:
+   *certbot certonly --manual --preferred-challenges=dns   --email admin@prmfincon.com --server https://acme-v02.api.letsencrypt.org/directory -d *.digiclark.com -d digiclark.com
+add the DNS-TXT record and value as given by creating a new record under that domain in aws
+6) Once the certificate is generated (30 min minimum) import the cerficate in ACM
+ 1) copy the 1st part from the full chain as certificate body
+ 2) copy the whole key in certificate key
+ 3) copy the whole fullchain in certificate chain
+7)create the bucket in S3 and give the permission to it.
+8) Go the the bucket -->properties -->Static website hosting --> enable --> give index.html -->save changes
+9)Go to Route 53 and create a A name record with (alias) in the hosted zone.
+10) save the A record and open the url in the browser.
+
+
+
+
+
+
+
+
+
+
+
+
+
