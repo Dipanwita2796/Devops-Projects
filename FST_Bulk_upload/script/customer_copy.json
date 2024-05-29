@@ -1,0 +1,20 @@
+{
+	"entityname": "",
+	"externalentityid": "",
+	"internalentityid": null,
+	"metadata": {
+		"finendmonidx": {
+			"code": ,
+			"name": ""
+		},
+		"country": {
+			"code": "",
+			"name": ""
+		},
+		"industrycode": {
+			"code": "",
+			"name": ""
+		}
+	},
+	"docSummary": {}
+}

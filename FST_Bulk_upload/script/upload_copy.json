@@ -1,0 +1,41 @@
+{
+	"documents": [
+		{
+			"dmscode": "937c282150004ccdbc60e3f70105e8db",
+			"documenttype": "FST",
+			"filename": "TELENOR_MICROFINANCE_BANK_LIMITED_2121.pdf",
+			"docmeta": {
+				"docsource": "",
+				"template": {
+					"name": "",
+					"code": ""
+				},
+				"unit": "",
+				"currency": {
+					"code": "",
+					"name": "",
+					"desc": ""
+				},
+				"language": {
+					"code": "",
+					"name": "",
+					"desc": ""
+				},
+				"datatype": "",
+				"isresult": "",
+				"pagenumberbscon":"",
+				"pagenumberbssta":"",
+				"pagenumbercfcon":"",
+				"pagenumbercfsta":"",
+				"pagenumberiscon":"",
+				"pagenumberissta":"",
+				"pagenumbernotesliquidity": "",
+				"password": "",
+				"entityid": "",
+				"industrycode": "",
+				"entityname": "",
+				"features": []
+			}
+		}
+	]
+}

@@ -1,0 +1,44 @@
+{
+	"documents": [
+		{
+			"dmscode": "dms_code",
+			"documenttype": "FST",
+			"filename": "file_name",
+			"docmeta": {
+				"docsource": "docsource_name",
+				"template": {
+					"name": "template_name",
+					"code": "template_code"
+				},
+				"unit": "unit_code",
+				"currency": {
+					"code": "currency_code",
+					"name": "currency_name",
+					"desc": "currency_desc"
+				},
+				"language": {
+					"code": "lang_code",
+					"name": "lang_name",
+					"desc": "lang_desc"
+				},
+				"datatype": "datatype_code",
+				"isresult":"isresult_value",
+				"pagenumberbscon":"pagenumberbscon_value",
+				"pagenumberbssta":"pagenumberbssta_value",
+				"pagenumbercfcon":"pagenumbercfcon_value",
+				"pagenumbercfsta":"pagenumbercfsta_value",
+				"pagenumberiscon":"pagenumberiscon_value",
+				"pagenumberissta":"pagenumberissta_value",
+				"pagenumbernotes":"pagenumbernotes_value",
+				"pagenumbernotesliquidity": "pagenumbernotesliquidity_value",
+				"password": "password_value",
+				"industrycode": "industrycode_value",
+				"entityid": "entity_id",
+				"entityname": "entity_name",
+				"features": [
+					"features_value"
+				]
+			}
+		}
+	]
+}
