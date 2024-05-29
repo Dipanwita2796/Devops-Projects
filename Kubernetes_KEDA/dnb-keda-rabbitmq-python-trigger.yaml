@@ -1,0 +1,10 @@
+apiVersion: keda.sh/v1alpha1
+kind: TriggerAuthentication
+metadata:
+  name: keda-dnb-trigger-python-rabbitmq-conn
+  namespace: dnb-app
+spec:
+  secretTargetRef:
+  - parameter: host
+    name: keda-dnb-rabbitmq-python-secret
+    key: host

@@ -1,0 +1,23 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: identification-main-keda-scaledobject
+  namespace: dnb-app
+spec:
+  scaleTargetRef:
+    name:  identification-main
+  pollingInterval:  5                              # Optional. Default: 30 seconds
+  cooldownPeriod:   45                              # Optional. Default: 300 seconds
+  idleReplicaCount: 0                                # Optional. Default: ignored, must be less than minReplicaCount
+  minReplicaCount:  1                                # Optional. Default: 0
+  maxReplicaCount:  2
+  triggers:
+  - type: rabbitmq
+    metadata:
+      protocol: amqp
+      queueName: model_wakeup_queue
+      mode: QueueLength
+      value: "2"
+      metricName: custom-testqueue # DEPRECATED: This parameter is deprecated as of KEDA v2.10 and will be removed in version `2.12`. optional. Generated value would be `rabbitmq-custom-testqueue`
+    authenticationRef:
+      name: keda-dnb-trigger-python-rabbitmq-conn

@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: identification-main
+spec:
+  selector:
+    matchLabels:
+      app: identification-main
+      run-on-fargate: 'yes'
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: identification-main
+        run-on-fargate: 'yes'
+    spec:
+      containers:
+      - name: identification-main
+        image: 083887970427.dkr.ecr.ap-south-1.amazonaws.com/test:identification_main_UBUNTU_test_21092023
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - name: persistent-storage
+          mountPath: /extraction_main/Final_Output
+        readinessProbe:
+          tcpSocket:
+            port: 8023
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          timeoutSeconds: 30
+          failureThreshold: 10
+          successThreshold: 1
+        ports:
+        - containerPort: 8023
+        envFrom:
+          - configMapRef:
+              name: iden-env-configmap
+        resources:
+          requests:
+            cpu: 3000m
+            memory: "6000Mi"
+          limits:
+            cpu: 3000m
+            memory: "6000Mi"
+      #nodeSelector:
+      #  eks.amazonaws.com/nodegroup: xlrt-python-app
+      volumes:
+        - name: persistent-storage
+          persistentVolumeClaim:
+            claimName: efs-python-service-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: identification-main
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 8023
+    targetPort: 8023
+    protocol: TCP
+  selector:
+    app: identification-main
+    run-on-fargate: 'yes'
+---
