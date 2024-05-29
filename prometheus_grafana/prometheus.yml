@@ -1,0 +1,32 @@
+global:
+  scrape_interval: 10s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'node-app-server'
+    static_configs:
+      - targets: ['13.201.139.38:4001']
+
+  - job_name: 'cadvisor-app-server'
+    static_configs:
+      - targets: ['13.201.139.38:4002']
+
+  - job_name: 'node-model-server'
+    static_configs:
+      - targets: ['13.127.200.172:4001']
+
+  - job_name: 'cadvisor-model-server'
+    static_configs:
+      - targets: ['13.127.200.172:4002']
+
+  - job_name: 'node-graph-server'
+    static_configs:
+      - targets: ['13.202.122.88:4001']
+
+  - job_name: 'cadvisor-graph-server'
+    static_configs:
+      - targets: ['13.202.122.88:4002']

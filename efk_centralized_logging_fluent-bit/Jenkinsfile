@@ -1,0 +1,26 @@
+pipeline {
+  agent any
+  stages {
+    stage("stage 1") {
+      steps {
+        sh '''
+          sudo docker stop efk_java || true && sudo docker rm efk_java || true
+        '''
+      }
+    }
+    stage("stage 2") {
+      steps {
+        sh '''
+          sudo docker stop efk_python || true && sudo docker rm efk_python || true
+        '''
+      }
+    }
+    stage("run") {
+      steps {
+        sh '''
+          sudo docker-compose up -d --build --force-recreate
+          '''
+      }
+    }
+  }
+}

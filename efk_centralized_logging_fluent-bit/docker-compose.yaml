@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  fluent-bit-python:
+    image: fluent/fluent-bit:1.8-debug
+    restart: always
+    command: /fluent-bit/bin/fluent-bit -c /fluent-bit/etc/fluent-bit.conf
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    volumes:
+      - /var/log/fluent-bit/python/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+      - /var/log/fluent-bit/python/parsers.conf:/fluent-bit/etc/parsers.conf
+    logging:
+      driver: none
+    container_name: efk_python
+
+  
+  # fluent-bit-java:
+  #   image: fluent/fluent-bit:1.8-debug
+  #   container_name: efk_java
+  #   restart: always
+  #   command: /fluent-bit/bin/fluent-bit -c /fluent-bit/etc/fluent-bit.conf
+  #   ports:
+  #     - "24225:24225"
+  #     - "24225:24225/udp"
+  #   volumes:
+  #     - /var/log/fluent-bit/java/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+  #     - /var/log/fluent-bit/java/parsers.conf:/fluent-bit/etc/parsers.conf
+  #     - /var/log/java/bstreport/spring-boot-logger.log:/fluent-bit/logs/bstreport.log
+  #     - /var/log/java/dms/spring-boot-logger.log:/fluent-bit/logs/dms.log
+  #     - /var/log/java/docparser/spring-boot-logger.log:/fluent-bit/logs/docparser.log
+  #     - /var/log/java/findata/spring-boot-logger.log:/fluent-bit/logs/findata.log
+  #     - /var/log/java/license/spring-boot-logger.log:/fluent-bit/logs/license.log
+  #     - /var/log/java/mapper/spring-boot-logger.log:/fluent-bit/logs/mapper.log
+  #     - /var/log/java/reference/spring-boot-logger.log:/fluent-bit/logs/reference.log
+  #     - /var/log/java/retail/spring-boot-logger.log:/fluent-bit/logs/retail.log
+  #     - /var/log/java/auth/spring-boot-logger.log:/fluent-bit/logs/auth.log
+  #     - /var/log/java/form/spring-boot-logger.log:/fluent-bit/logs/form.log
+  #     - /var/log/java/notification/spring-boot-logger.log:/fluent-bit/logs/notification.log
+  #     - /var/log/java/fst-service/spring-boot-logger.log:/fluent-bit/logs/fst-service.log
+  #     - /var/log/java/config/spring-boot-logger.log:/fluent-bit/logs/config.log
+  
+networks:
+  default:
+    external: true
+    name: xlrt-cloud-network

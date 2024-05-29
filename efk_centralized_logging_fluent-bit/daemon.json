@@ -1,0 +1,1 @@
+{"log-driver":"fluentd","log-opts":{"fluentd-address":"0.0.0.0:24224", "fluentd-async-connect":"true"}}
